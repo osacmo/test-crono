@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS `copy-test-DA`.`datos` (
+  `idRFID` VARCHAR(50) NOT NULL ,
+  `fecha_hora` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `zona` INT NOT NULL,
+  PRIMARY KEY (`idRFID`, `zona`))
+ENGINE = InnoDB;
+

@@ -1,0 +1,23 @@
+{
+  "name": "test-cron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rodrigogs/mysql-events": "^0.6.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^3.3.0",
+    "node-cron": "^3.0.2",
+    "sequelize": "^6.31.1",
+    "unique-names-generator": "^4.7.1",
+    "uuid": "^9.0.0"
+  }
+}

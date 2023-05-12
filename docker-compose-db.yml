@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    image: mysql:latest
+    container_name: mysql-db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=copy-test-DA
+    ports:
+      - "3307:3306"
+    expose:
+      - "3306"
+    volumes:
+      - db:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - mysqldb
+    build: .
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      - PMA_ARBITRARY=1
+
+volumes: 
+  db:
